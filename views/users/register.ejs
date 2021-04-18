@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs') %> 
+    <form action="/users/register" method="POST" id="register-form">
+        <div class="container-md">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                <input type="name" name="nombre" class="form-control" id="exampleInputNombre1"
+                    aria-describedby="emailHelp" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Apellido</label>
+                <input type="name" name="apellido" class="form-control" id="exampleInputApellido1"
+                    aria-describedby="emailHelp" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Ciudad</label>
+                <input type="name" name="ciudad" class="form-control" id="exampleInputCiudad1"
+                    aria-describedby="emailHelp" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Domicilio</label>
+                <input type="name" name="domicilio" class="form-control" id="exampleInputDomicilio1"
+                    aria-describedby="emailHelp" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1" required>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-danger">Registrarse</button>
+                <a type="button" class="btn btn-primary" href="/users/login">Ya tengo una cuenta</a>
+            </div>
+    </form>
+</body>
+
+</html>

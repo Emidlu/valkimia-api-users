@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs') %> 
+    <div class="my-5">
+    <form action="/users/profile" method="POST" id="register-form">
+        <div class="container-md">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                <input type="name" name="nombre" class="form-control" id="exampleInputNombre1"
+                    aria-describedby="emailHelp" value="<%= nombre %>" required>
+
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Apellido</label>
+                <input type="name" name="apellido" class="form-control" id="exampleInputApellido1"
+                    aria-describedby="emailHelp" value="<%= apellido %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Ciudad</label>
+                <input type="name" name="ciudad" class="form-control" id="exampleInputCiudad1"
+                    aria-describedby="emailHelp" value="<%= ciudad %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Domicilio</label>
+                <input type="name" name="domicilio" class="form-control" id="exampleInputDomicilio1"
+                    aria-describedby="emailHelp" value="<%= domicilio %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" value="<%= email %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Nuevo Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary">Confirmar cambios</button>
+                </form>
+                <form action="/users/delete" method="POST" id="delete-form">
+                    <button type="submit" class="btn btn-danger">Borrar cuenta</button>
+                </form>
+
+            </div>
+        </div>
+
+</body>
+
+</html>

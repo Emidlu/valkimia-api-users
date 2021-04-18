@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('../partials/head.ejs') %>
+  <title>Document</title>
+</head>
+
+<body>
+  <%- include('../partials/header.ejs') %>
+
+  <div class="d-flex  justify-content-center my-5">
+  <div class="card mb-3" style="max-width: 740px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img width="200" height="200" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="usuario">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Bienvenido <%= nombre %> <%= apellido %></h5>
+          <h5 class="card-title text-info">Tus datos</h5>
+          <p class="card-text">Dirección: <%= domicilio %> <br>Email: <%= email %></p>
+        </div>
+      </div>
+    </div>
+    <div class="container-md d-flex justify-content-between">
+      <a type="button" class="btn btn-secondary" href="/users/profile">Editar Perfil</a>
+  
+      <form action="/users/logout" method="POST">
+      <button type="submit" class="btn btn-danger">Cerrar sesión</button>
+  
+    </div>
+  </div>
+  
+</div>
+
+
+
+</body>
+
+</html>
